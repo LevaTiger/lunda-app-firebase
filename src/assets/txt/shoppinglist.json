@@ -1,0 +1,38 @@
+{
+    "shirts" :[
+        {
+            "name":"Black Puffle T-shirt",
+            "color":"black",
+            "size":"unisex",
+            "src":"/webshop-media/black-puffle-shirt.webp",
+            "pirce":"3 990Ft",
+            "id":1
+
+
+        },
+        {
+            "name":"Disco T-shirt",
+            "color":"black",
+            "size":"unisex",
+            "src":"/webshop-media/disco-shirt.webp",
+            "pirce":"3 990Ft",
+            "id":2
+        },
+        {
+            "name":"Paint T-shirt",
+            "color":"black",
+            "size":"unisex",
+            "src":"/webshop-media/paint-shirt.webp",
+            "pirce":"3 990Ft",
+            "id":3
+        },
+        {
+            "name":"Stars T-shirt",
+            "color":"black",
+            "size":"unisex",
+            "src":"/webshop-media/stars-shirt.webp",
+            "pirce":"3 990Ft",
+            "id":4
+        }
+    ]
+}

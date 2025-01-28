@@ -1,0 +1,10 @@
+background: background: linear-gradient(45deg, hsl(300, 80%, 20%), hsl(195, 80%, 20%));
+
+
+Article txt:
+
+Megjelent a <i>"Képzelt falak"</i> albumunk ami a modern "internetes" társadalom individualista egymástól való eltávolodásáról, a szerelem és a legszorosabb emberi kapcsolatokról szól.
+
+
+Idén sokkal izgalmasabb ötletekkel próbáljuk felturbózni a produkciónk minden részét. Többek közt egyre igyekszünk a nyár közeledtével kiadni hasonlóan új bulis dalainkat mint a
+                              <a target="_blank" href="https://www.youtube.com/watch?v=BEyRHlDR3Jg"><i>"Lila köd</i></a><sup>[katt]</sup> című dalunk, mindeközben minél több érzelmet átfogó műveinket is eljuttatni a hallgatósághoz.

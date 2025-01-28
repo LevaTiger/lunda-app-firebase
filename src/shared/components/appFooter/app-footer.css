@@ -1,0 +1,21 @@
+.app-footer {
+    background-color: rgb(23, 23, 23);
+    color: white;
+    
+}
+
+.app-footer div {
+    padding: 1rem;
+}
+
+.app-footer .container> p{
+    font-family: ' sans';
+}
+
+.flex-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+

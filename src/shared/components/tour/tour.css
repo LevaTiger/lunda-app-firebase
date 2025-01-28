@@ -1,0 +1,55 @@
+
+
+.bg-img {
+    background: linear-gradient(45deg, hsl(300, 80%, 20%), hsl(195, 80%, 20%));
+    margin: 0;
+    
+}
+div h1 {
+    text-align: center;
+    margin: 0;
+    font-family: 'Adler';
+    padding-top: 1rem;
+    color: rgb(255, 255, 255);
+
+}
+
+.container .dates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+
+   
+}
+.container .upcoming {
+    display: flex;
+    gap: 1rem;
+}
+
+.container .upcoming h4 {
+    text-shadow: 0px 0px 10px white;
+}
+
+.calendar-date {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(174, 192, 208) ;
+    border-radius: 1rem;
+    
+    
+}
+
+@media screen and (min-width:980px) {
+    .calendar-date{
+        flex-wrap:wrap;
+
+    }
+    
+}

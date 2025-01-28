@@ -1,0 +1,40 @@
+.form-box{
+   height: auto;
+}
+
+.form-box > .admin-login{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    
+    background: linear-gradient( #e66465, #9198e5);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px white;
+
+    overflow:auto;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form-box .admin-login .form-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    
+}
+@media screen and (max-width:580px) {
+    .form-box .admin-login .form-inputs {
+        flex-direction: column;
+    }
+    .form-box > .admin-login {
+        flex-direction: column;
+    }
+}

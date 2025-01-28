@@ -1,0 +1,56 @@
+.webshop-layout {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.webshop-layout .sidebar {
+    display: none;
+    
+
+    padding: 1rem;
+    background-color: rgb(129, 129, 129);
+    width: 100%;
+
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    
+    border-radius: .5rem 0 0 0;
+    overflow: auto;
+    
+}
+
+.sidebar.visible{
+    display: block;
+}
+.sidebar.hidden{
+    display:none;
+}
+.webshop-layout .sidebar .cart-title{
+    background-color: lightgrey;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    
+}
+.bg-img {
+    background: linear-gradient(45deg, hsl(300, 80%, 20%), hsl(195, 80%, 20%));
+    margin: 0;
+    background: cover;
+    min-height: 100vh;
+    
+}
+
+.t-shirts{
+    padding-bottom: 3rem;
+}
+.t-shirts > h3 {
+    padding: 1rem;
+    text-align: center;
+}
+.t-shirts > h3 >button {
+    border-radius: 1rem;
+}
+.t-shirts > h3 >button >img {
+    width: 30px;
+    cursor: pointer;
+}

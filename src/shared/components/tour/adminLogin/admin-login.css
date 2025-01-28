@@ -1,0 +1,15 @@
+div > details {
+    height: auto;
+}
+
+div > details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    font-size: larger;
+   
+}
+div > details > summary:hover{
+    
+    text-shadow:0px 0px 12px white;
+}
