@@ -1,60 +1,77 @@
-import { createContext, useContext, useState} from 'react';
+import { createContext, useContext, useEffect, useState} from 'react';
 import AdminLogin from './adminLogin/AdminLogin';
 import './tour.css'
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
+import trashcanImg from '../../../assets/media/trashcan.jpg'
 
 export const newDatesContext = createContext();
-
-
+export const AuthContext = createContext();
 
 const Tour = () =>{
 
     
     const [newDates, setNewDate] = useState([]);
-    
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+     useEffect(()=> {
+           const savedDates = localStorage.getItem("date");
+           if (savedDates) {
+            setNewDate(JSON.parse(savedDates))
+            console.log('van dátum')
+           }
+       }, [])
    
+       const handleDelete = (index) => {
+        const updatedDates = newDates.filter((_, i) => i !== index); // 
+        setNewDate(updatedDates);
+        localStorage.setItem("date", JSON.stringify(updatedDates)); 
+    };
+    
     return (
-        <newDatesContext.Provider value={{newDates, setNewDate}}>
-            <div className='bg-img'>
-                    <div>
-                        <AdminLogin />
-                    </div>
+        <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
 
-                <div className='container'>
-                    <h1>Koncertek</h1>
-                    <div className="dates">
+            <newDatesContext.Provider value={{newDates, setNewDate}}>
+                <div className='bg-img'>
+                        <div>
+                            <AdminLogin />
+                        </div>
 
-                        <CalendarDate />
+                    <div className='container'>
+                        <h1>Koncertek</h1>
+                        <div className="dates">
 
-                        {
-                            newDates.length> 0? (
-                                newDates.map((date, index)=>(
-                                    <div key={index} className='calendar-date'>
-                                        <h3>{date.location} | {date.date} | {date['calendar-name']}</h3> 
-                                        <AddToCalendarButton
-                                            name={date['calendar-name']}
-                                            startDate={date.date}
-                                            options={['Apple','Google','Yahoo','iCal']}
-                                            timeZone={`Europe/${date.location}`}
-                                        />
-                                        
+                            <CalendarDate />
+
+                            {
+                                newDates.length> 0? (
+                                    newDates.map((date, index)=>(
+                                        <div key={index} className='calendar-date'>
+                                            <h3>{date.location} | {date.date} | {date['calendar-name']}</h3> 
+                                            <AddToCalendarButton
+                                                name={date['calendar-name']}
+                                                startDate={date.date}
+                                                options={['Apple','Google','Yahoo','iCal']}
+                                                timeZone={`Europe/${date.location}`}
+                                            />
+                                            <button onClick={()=>handleDelete(index)} className={`${isLoggedIn? '' : 'hidden'}`} type="button"><img src={trashcanImg} alt="Trashcan icon" /></button>
+                                            
+                                        </div>
+                                    ))
+                                ) :(
+                                    <div className="upcoming">
+                                        <h4>Dátumok folyamatban...</h4>
                                     </div>
-                                ))
-                            ) :(
-                                <div className="upcoming">
-                                    <h4>Dátumok folyamatban...</h4>
-                                </div>
-                            )
-                        }
+                                )
+                            }
+                        </div>
+
+
+                        
                     </div>
 
-
-                    
                 </div>
-
-            </div>
-        </newDatesContext.Provider>
+            </newDatesContext.Provider>
+        </AuthContext.Provider>
     )
 }
 

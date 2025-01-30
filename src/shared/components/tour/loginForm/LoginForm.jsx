@@ -1,7 +1,7 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import './login-form.css'
-import { newDatesContext } from '../tour';
+import { AuthContext, newDatesContext } from '../tour';
 
 const LoginForm = ()=>{
 
@@ -10,7 +10,7 @@ const LoginForm = ()=>{
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext);
 
     const [dateformLocation, setDateformLocation] = useState("");
     const [dateformDate, setDateformDate] = useState("");
@@ -18,6 +18,15 @@ const LoginForm = ()=>{
 
     
    const {newDates, setNewDate} = useContext(newDatesContext)
+
+   useEffect(()=> {
+       const savedDates = localStorage.getItem("date");
+       if (savedDates) {
+        setNewDate(JSON.parse(savedDates))
+       }
+
+   }, [])
+   
    
 
 //bejelentkezéshez szükséges kódrész
@@ -49,6 +58,8 @@ const LoginForm = ()=>{
 
         const formData = new FormData(event.target)
         const payload = Object.fromEntries(formData)
+        const StoredDates = [...addedDates, payload]
+        localStorage.setItem("date", JSON.stringify(StoredDates))
         
         console.log(payload)
        

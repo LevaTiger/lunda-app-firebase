@@ -45,6 +45,15 @@ div h1 {
     
     
 }
+.calendar-date .hidden{
+    display: none;
+}
+.calendar-date > button {
+    width: 40px;
+}
+.calendar-date > button >img {
+    width: 100%;
+}
 
 @media screen and (min-width:980px) {
     .calendar-date{
