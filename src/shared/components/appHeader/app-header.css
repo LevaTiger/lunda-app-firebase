@@ -46,11 +46,12 @@ header nav ul li figure {
 
 .app-header nav ul li a{
     transition: background-color 0.5s ease; 
+    height: 100%;
 }
 
 .app-header nav ul li a:hover {
     background-color:hsl(284, 100%, 90%);
     color: rgb(45, 45, 45);
-    
+    height: 100%;
 }
 

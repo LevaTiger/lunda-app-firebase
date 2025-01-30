@@ -32,6 +32,7 @@
     text-align: center;
     
 }
+
 .bg-img {
     background: linear-gradient(45deg, hsl(300, 80%, 20%), hsl(195, 80%, 20%));
     margin: 0;
@@ -47,6 +48,9 @@
     padding: 1rem;
     text-align: center;
 }
+.t-shirts > h3 >button:hover{
+    cursor: pointer;
+}
 .t-shirts > h3 >button {
     border-radius: 1rem;
 }
@@ -54,3 +58,4 @@
     width: 30px;
     cursor: pointer;
 }
+

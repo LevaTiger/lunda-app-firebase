@@ -5,11 +5,12 @@
     background: linear-gradient(45deg, hsl(300, 80%, 20%), hsl(195, 80%, 20%));
     margin: 0;
     width: 100%;
+  
     
     
 }
     
-.bg-img .container 
+
 
 .bg-img .container .white-text-style .article-area {
     display: flex;
@@ -22,17 +23,19 @@
     
 }
 
-.bg-img .container .white-text-style .article-area >div{
+.bg-img .flex-wrap {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-
 }
 
 @media screen and (min-width:720px) {
     .bg-img .container .white-text-style .article-area >div{
         flex-wrap: nowrap;
         
+    }
+    .bg-img-day .container .white-text-style .article-area>div {
+        flex-wrap: nowrap;
     }
     
 }
@@ -51,6 +54,137 @@
 .bg-img .container .article-area >div> p> a {
     text-decoration: none;
     color: rgb(46, 175, 255);
+}
+
+
+
+
+.bg-img-day {
+    background: linear-gradient(45deg, hsl(207, 100%, 63%), hsl(207, 86%, 20%));
+    margin: 0;
+    width: 100%;
+ 
+    
+    
+}
+.bg-img-day .container .white-text-style .article-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-img-day .container .white-text-style>h1 {
+    text-shadow: 0px 0px 50px  rgb(110, 199, 255);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .5rem;
+    
+}
+
+.bg-img-day .flex-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+
+/* .bg-img-day .container .white-text-style .article-area >div{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+} */
+.bg-img-day .container .article-area >div>figure>img{
+    width: 300px;
+    box-shadow: 3px 3px 10px grey;
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.bg-img-day .container .article-area >div> p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.bg-img-day .container .article-area >div> p> a {
+    text-decoration: none;
+    color: rgb(46, 175, 255);
+}
+
+
+.toggle-btn-area{
+    display: flex;
+    padding: .5rem;
+}
+.toggle-btn-area .toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px ;
+    
+    background-image: linear-gradient(aqua, skyblue);
+
+    position: relative;
+    cursor: pointer;
+}
+.toggle-btn-area .toggle.night{
+    background-image: linear-gradient(midnightblue, rebeccapurple);
+
+}
+.toggle-btn-area .toggle.night>.notch{
+    background: whitesmoke;
+    box-shadow: 0px 0px 5px whitesmoke;
+    transform: translate(25px, 0);
+}
+.notch .crater{
+    background-color: burlywood;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+    opacity: 0;
+}
+.night .crater{
+    opacity: 0.4;
+}
+.notch .crater:first-child{
+    left: 5px;
+    top: 15px;
+    height: 5px;
+    width: 1.25px;
+    transform: rotate(-45deg);
+}
+
+
+.notch .crater:last-child{
+    right: 5px;
+    top: 15px;
+    height: 4px;
+    width: 2px;
+    transform: rotate(45deg);
+}
+.notch #secondcrater{
+    right: 6px;
+    top: 6px;
+    height: 7px;
+    width: 4px;
+    transform: rotate(45deg);
+}
+
+.notch #thirdcrater{
+    right: 14px;
+    top: 4px;
+    height: 4px;
+    width: 2px;
+    transform: rotate(45deg);
+}
+.toggle-btn-area .toggle .notch {
+    height: 22.5px ;
+    width: 22.5px ;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    top: 1.25px ;
+    left: 1.25px ;
+    box-shadow: 0px 0px 5px yellow;
+    transition: all 0.3s ease;
 }
 
 

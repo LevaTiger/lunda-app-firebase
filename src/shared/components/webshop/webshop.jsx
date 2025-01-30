@@ -85,7 +85,7 @@ const Webshop = () => {
                   
                   <div className="t-shirts">
                     <h1>Merch</h1>
-                    <h3><button  onClick={toggleSidebar}>Kosár<img src={shoppingCartImg} alt="" /></button></h3>
+                    <h3><button  onClick={toggleSidebar}>Kosár<img src={shoppingCartImg} alt='Bevásárló kocsi' /></button></h3>
                       <ShopItemCard addToCart={addToCart} />
                       
                   </div>
