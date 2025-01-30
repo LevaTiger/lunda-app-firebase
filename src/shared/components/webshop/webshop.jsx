@@ -83,9 +83,13 @@ const Webshop = () => {
             </div>
             <div className="container white-text-style">
                   
-                  <div className="t-shirts">
+                  <div className="t-shirts container">
                     <h1>Merch</h1>
-                    <h3><button  onClick={toggleSidebar}>Kosár<img src={shoppingCartImg} alt='Bevásárló kocsi' /></button></h3>
+                    <h3><button  onClick={toggleSidebar}>
+                            Kosár
+                          <img src={shoppingCartImg} alt='Bevásárló kocsi' />
+                          {cartItems.length > 0&& <span className="cart-items-counter">{cartItems.length}</span>}
+                        </button></h3>
                       <ShopItemCard addToCart={addToCart} />
                       
                   </div>
