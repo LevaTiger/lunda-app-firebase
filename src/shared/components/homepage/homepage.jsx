@@ -4,6 +4,9 @@ import kepzeltFalak from '../../../assets/media/kepzelt-falak.jpg'
 import { useState } from 'react';
 const Homepage = () => {
 
+  const styletxtc = {
+    textAlign: 'center'
+  }
 
   const [toggled, setToggled] = useState(true);
   const handleClick = ()=>{
@@ -24,6 +27,16 @@ const Homepage = () => {
                     
 
                         <div className='article-area'>
+                          <div className="column-flex">
+                          <h3 style={styletxtc}> Mi az a Lunda egyáltalán?</h3>
+                         
+                            <iframe 
+                              width="560" 
+                              height="315" 
+                              src="https://www.youtube.com/embed/dogAdZKzf5Q?si=BiR16tOW0DblsNso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="true"></iframe>
+
+                          
+                          </div>
                           <div className='flex-wrap'>
                             <p>Megjelent a <a target="_blank" href="https://www.youtube.com/watch?v=UMIGllyK2r8&list=PLCedEysw-Yf9BnYU0Td3i2Ki-ITl_vZUN">Képzelt falak<sup>[katt]</sup></a> albumunk ami a modern internetes társadalom individualista egymástól való eltávolodásáról, a szerelem és a legszorosabb emberi kapcsolatokról szól.</p>
                               <figure>

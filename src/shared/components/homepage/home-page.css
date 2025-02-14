@@ -84,6 +84,16 @@
     flex-direction: row-reverse;
     flex-wrap: wrap;
 }
+.column-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.column-flex iframe {
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgb(211, 211, 211);
+}
 
 
 /* .bg-img-day .container .white-text-style .article-area >div{
